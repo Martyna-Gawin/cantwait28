@@ -59,24 +59,25 @@ class _AddPageState extends State<AddPage> {
                 ],
               ),
               body: _AddPageBody(
-                  onTitleChanged: (newValue) {
-                    setState(() {
-                      _title = newValue;
-                    });
-                  },
-                  onImageUrlChanged: (newValue) {
-                    setState(() {
-                      _imageURL = newValue;
-                    });
-                  },
-                  onDateChanged: (newValue) {
-                    setState(() {
-                      _releaseDate = newValue;
-                    });
-                  },
-                  selectedDateFormatted: _releaseDate == null
-                      ? null
-                      : DateFormat.yMMMMEEEEd().format(_releaseDate!)),
+                onTitleChanged: (newValue) {
+                  setState(() {
+                    _title = newValue;
+                  });
+                },
+                onImageUrlChanged: (newValue) {
+                  setState(() {
+                    _imageURL = newValue;
+                  });
+                },
+                onDateChanged: (newValue) {
+                  setState(() {
+                    _releaseDate = newValue;
+                  });
+                },
+                selectedDateFormatted: _releaseDate == null
+                    ? null
+                    : DateFormat.yMMMMEEEEd().format(_releaseDate!),
+              ),
             );
           },
         ),
